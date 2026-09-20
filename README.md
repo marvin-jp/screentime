@@ -28,7 +28,7 @@ The block list covers these by default:
 | Second factor and recovery | Authenticator apps, Authentication code, Recovery Code, Seed Phrase, Secret Recovery |
 | Key and secret files | `.env`, `id_rsa`, `id_ed25519`, `.pem`, `.p12`, `credentials.json`, `secrets.yaml/json/env/txt`, `.netrc`, `.pgpass` |
 | Key material in a text window | any window whose title contains `BEGIN ... PRIVATE KEY` |
-| Setup tokens | `setup-token` |
+| One time setup tokens | any window titled `setup-token`, the short lived credential some CLI tools print during a first login |
 
 You extend it by editing one line in the capture script. Both platform scripts
 carry the same list.
@@ -121,8 +121,8 @@ but recommended on macOS, `cwebp` from Homebrew for smaller frames.
 
 ## Install
 
-macOS: `mac/install-notes.md`, and read the permission note below first.
-Windows: `windows/install-notes.md`.
+macOS: [`mac/install-notes.md`](mac/install-notes.md), and read the permission
+note below first. Windows: [`windows/install-notes.md`](windows/install-notes.md).
 
 ### The macOS permission note
 
@@ -141,15 +141,16 @@ Windows needs no equivalent permission.
 
 ## Privacy scan
 
-`scripts/privacy-scan.sh` greps the whole working tree for things that should
-never be committed, meaning email addresses, home directory paths and any
-personal marker you list in `.privacy-markers`. Copy
+[`scripts/privacy-scan.sh`](scripts/privacy-scan.sh) greps the whole working
+tree for things that should never be committed, meaning email addresses, home
+directory paths and any personal marker you list in `.privacy-markers`. Copy
 `.privacy-markers.example` to `.privacy-markers` (it is gitignored) and put
 your own name, company names and project names in it. Run the scan before
 every commit.
 
-`tests/test_privacy_scan.sh` verifies the scan actually works, because a broken
-grep and a clean repository look exactly the same from the outside.
+[`tests/test_privacy_scan.sh`](tests/test_privacy_scan.sh) verifies the scan
+actually works, because a broken grep and a clean repository look exactly the
+same from the outside.
 
 ## What this version does not have
 
@@ -169,4 +170,4 @@ Named honestly, so nothing here promises more than it does.
 
 ## License
 
-MIT, see `LICENSE`.
+MIT, see [`LICENSE`](LICENSE).
