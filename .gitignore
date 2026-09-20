@@ -1,0 +1,20 @@
+# Recordings: screenshots, logs, notes. Never in the repo.
+data/
+output/
+
+# Local privacy markers (names, projects) used by scripts/privacy-scan.sh
+.privacy-markers
+
+# System and local artifacts
+.DS_Store
+.env
+.tmp/
+
+# Python bytecode
+__pycache__/
+*.pyc
+.pytest_cache/
+
+# compiled helpers (see mac/install-notes.md)
+mac/windowscan
+*.o

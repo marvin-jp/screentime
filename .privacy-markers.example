@@ -1,0 +1,5 @@
+# Copy to .privacy-markers (gitignored) and add your own strings.
+# One per line, case-insensitive, matched literally.
+# your-name
+# your-company
+# your-project-codename
